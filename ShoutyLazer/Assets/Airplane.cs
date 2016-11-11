@@ -14,6 +14,8 @@ public class Airplane : MonoBehaviour {
 	public float life;
 	public float timeToRemove;
 
+	public Vector3 offset;
+
 	Vector3 vel;
 	Quaternion rotation;
 
@@ -30,10 +32,10 @@ public class Airplane : MonoBehaviour {
 			Vector3 forward = rotation*Vector3.forward;
 			vel+=(forward*accel-vel*friction)*Time.deltaTime;
 			transform.position+=vel*Time.deltaTime;
-			if (transform.position.magnitude>maxDistance){
-				rotation = Quaternion.Slerp(rotation, Quaternion.LookRotation(-transform.position.normalized),turnLerp*Time.deltaTime);
-			} else if (transform.position.magnitude<minDistance){
-				rotation = Quaternion.Slerp(rotation, Quaternion.LookRotation(transform.position.normalized),turnLerp*Time.deltaTime);
+			if (Vector3.Distance(offset, transform.position)>maxDistance){
+				rotation = Quaternion.Slerp(rotation, Quaternion.LookRotation((offset-transform.position).normalized),turnLerp*Time.deltaTime);
+			} else if (Vector3.Distance(offset, transform.position)<minDistance){
+				rotation = Quaternion.Slerp(rotation, Quaternion.LookRotation((transform.position-offset).normalized),turnLerp*Time.deltaTime);
 			}
 			transform.rotation = Quaternion.LookRotation(vel.normalized);
 		} else {
