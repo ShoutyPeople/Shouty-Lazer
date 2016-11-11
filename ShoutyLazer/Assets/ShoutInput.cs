@@ -10,6 +10,7 @@ public class ShoutInput : MonoBehaviour  {
 		public static float SmoothedSqLoudness;
 
 		public static int ShoutPower;
+		public static float ShoutPowerf;
 
 		public float boost = 1;
 
@@ -80,6 +81,7 @@ public class ShoutInput : MonoBehaviour  {
 				}
 			}
 			ShoutPower = Power;
+			ShoutPowerf = Mathf.Max(ShoutPowerf-decay*Time.deltaTime,Power);
 			ShoutActive = Active;
         }
      
