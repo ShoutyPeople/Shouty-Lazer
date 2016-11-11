@@ -9,6 +9,7 @@
 	{
 		Tags { "Queue"="Transparent" "RenderType"="Transparent" }
 		Blend SrcAlpha OneMinusSrcAlpha
+		ZWrite On
 		LOD 100
 
 		Pass

@@ -47,11 +47,6 @@ public class Airplane : MonoBehaviour {
 			hurt.SetActive(true);
 			vel+=Physics.gravity*Time.deltaTime;
 			transform.position+=vel*Time.deltaTime;
-			Vector3 spinny = new Vector3(
-				Mathf.Cos(Time.time),
-				Mathf.Sin(Time.time),
-				0
-			);
 			transform.rotation = Quaternion.LookRotation(vel.normalized);
 		}
 	}
