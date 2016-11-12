@@ -22,6 +22,10 @@ public class Airplane : MonoBehaviour {
 
 	public Vector3 offset;
 
+	public bool limitAlt;
+	public float altRange;
+	public float limitdamp;
+
 	Vector3 vel;
 	Quaternion rotation;
 
@@ -38,6 +42,13 @@ public class Airplane : MonoBehaviour {
 			Vector3 forward = rotation*Vector3.forward;
 			vel+=(forward*accel-vel*friction)*Time.deltaTime;
 			transform.position+=vel*Time.deltaTime;
+			if (limitAlt){
+				if (transform.position.y>offset.y+altRange && vel.y>0){
+					vel.y-=vel.y*limitdamp*Time.deltaTime;
+				} else if (transform.position.y<offset.y-altRange && vel.y<0) {
+					vel.y-=vel.y*limitdamp*Time.deltaTime;
+				}
+			}
 			if (Vector3.Distance(offset, transform.position)>maxDistance){
 				rotation = Quaternion.Slerp(rotation, Quaternion.LookRotation((offset-transform.position).normalized),turnLerp*Time.deltaTime);
 			} else if (Vector3.Distance(offset, transform.position)<minDistance){
