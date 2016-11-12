@@ -3,11 +3,11 @@ using System.Collections;
 
 public class ResetEverything : MonoBehaviour {
 
+
+	public float seconds = 10;
 	// Use this for initialization
 	IEnumerator Reset () {
-		Debug.Log ("Ye");
-		yield return new WaitForSeconds(10);
-		Debug.Log ("No?");
+		yield return new WaitForSeconds(seconds);
 		foreach (KeepAlive ka in FindObjectsOfType<KeepAlive>()){
 			GameObject.Destroy(ka.gameObject);
 		}

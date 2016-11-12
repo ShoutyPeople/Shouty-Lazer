@@ -26,6 +26,8 @@ public class ShoutInput : MonoBehaviour  {
 		public float decay;
  
         private string _device;
+
+        float since = 0;
      
         //mic initialization
         void InitMic(){
@@ -83,6 +85,13 @@ public class ShoutInput : MonoBehaviour  {
 			ShoutPower = Power;
 			ShoutPowerf = Mathf.Max(ShoutPowerf-decay*Time.deltaTime,Power);
 			ShoutActive = Active;
+            if (Active){
+                since = 0;
+            }
+            since+=Time.deltaTime;
+            if (since>30){
+                gameObject.AddComponent<ResetEverything>().seconds=0;
+            }
         }
      
         bool _isInitialized;
