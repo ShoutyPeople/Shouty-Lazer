@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Asplode : MonoBehaviour {
 
+	public MonoBehaviour stop;
 	public float hp = 1;
 	public GameObject effects;
 
@@ -19,6 +20,9 @@ public class Asplode : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (hp<0){
+			if (stop!=null){
+				stop.enabled=false;
+			}
 			Quaternion rot = Quaternion.AngleAxis(spinSpeed*Time.deltaTime,axis);
 			transform.rotation = rot*transform.rotation;
 			if (upVel<=0){
