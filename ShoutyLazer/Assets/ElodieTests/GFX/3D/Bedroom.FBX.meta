@@ -1,0 +1,170 @@
+fileFormatVersion: 2
+guid: a3365dbb03fbb7e41a9935cb33f00bb3
+timeCreated: 1478961827
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Book_00
+    100004: Book_01
+    100006: Book_02
+    100008: Book_03
+    100010: Bureau
+    100012: Floor
+    100014: hibou
+    100016: homework
+    100018: Lamp
+    100020: Omni001
+    100022: Pen_00
+    100024: Pen_01
+    100026: Pen_02
+    100028: Pen_03
+    100030: Pen_04
+    100032: Pen_05
+    100034: pot
+    100036: Truc
+    100038: Wall
+    100040: Lamp_bulb
+    400000: //RootNode
+    400002: Book_00
+    400004: Book_01
+    400006: Book_02
+    400008: Book_03
+    400010: Bureau
+    400012: Floor
+    400014: hibou
+    400016: homework
+    400018: Lamp
+    400020: Omni001
+    400022: Pen_00
+    400024: Pen_01
+    400026: Pen_02
+    400028: Pen_03
+    400030: Pen_04
+    400032: Pen_05
+    400034: pot
+    400036: Truc
+    400038: Wall
+    400040: Lamp_bulb
+    2300000: Book_00
+    2300002: Book_01
+    2300004: Book_02
+    2300006: Book_03
+    2300008: Bureau
+    2300010: Floor
+    2300012: hibou
+    2300014: homework
+    2300016: Lamp
+    2300018: Pen_00
+    2300020: Pen_01
+    2300022: Pen_02
+    2300024: Pen_03
+    2300026: Pen_04
+    2300028: Pen_05
+    2300030: pot
+    2300032: Truc
+    2300034: Wall
+    2300036: Lamp_bulb
+    3300000: Book_00
+    3300002: Book_01
+    3300004: Book_02
+    3300006: Book_03
+    3300008: Bureau
+    3300010: Floor
+    3300012: hibou
+    3300014: homework
+    3300016: Lamp
+    3300018: Pen_00
+    3300020: Pen_01
+    3300022: Pen_02
+    3300024: Pen_03
+    3300026: Pen_04
+    3300028: Pen_05
+    3300030: pot
+    3300032: Truc
+    3300034: Wall
+    3300036: Lamp_bulb
+    4300000: Floor
+    4300002: Wall
+    4300004: Bureau
+    4300006: Truc
+    4300008: Book_03
+    4300010: Book_02
+    4300012: Book_01
+    4300014: hibou
+    4300016: Pen_05
+    4300018: Pen_04
+    4300020: Pen_03
+    4300022: Pen_02
+    4300024: Pen_01
+    4300026: Pen_00
+    4300028: pot
+    4300030: Book_00
+    4300032: homework
+    4300034: Lamp
+    4300036: Lamp_bulb
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
