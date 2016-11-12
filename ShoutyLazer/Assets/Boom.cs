@@ -26,7 +26,7 @@ public class Boom : MonoBehaviour {
 			transform.position+Quaternion.AngleAxis(Random.Range(0,360),transform.up)*new Vector3(circ.x, 0, circ.y),
 			Random.rotation);
 		if (time>boomTime){
-			GameObject.Destroy(gameObject);
+			enabled = false;
 		}
 	}
 }
