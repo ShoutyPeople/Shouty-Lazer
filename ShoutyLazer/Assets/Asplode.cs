@@ -31,7 +31,7 @@ public class Asplode : MonoBehaviour {
 	}
 	void Hit(){
 		hp-=Time.fixedDeltaTime;
-		if (hp<0){
+		if (hp<0 && effects!=null){
 			effects.SetActive(true);
 		}
 	}
