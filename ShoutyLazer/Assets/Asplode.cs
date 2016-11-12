@@ -5,7 +5,8 @@ public class Asplode : MonoBehaviour {
 
 	public float hp = 1;
 	public GameObject effects;
-	public float dieIn;
+
+	public GameObject Asplosion;
 	public float upVel;
 	public float spinSpeed;
 
@@ -20,10 +21,10 @@ public class Asplode : MonoBehaviour {
 		if (hp<0){
 			Quaternion rot = Quaternion.AngleAxis(spinSpeed*Time.deltaTime,axis);
 			transform.rotation = rot*transform.rotation;
-
-			dieIn-=Time.deltaTime;
-			if (dieIn<=0)
+			if (upVel<=0){
+				GameObject.Instantiate(Asplosion, transform.position, transform.rotation);
 				GameObject.Destroy(this.gameObject);
+			}
 			upVel+=Physics.gravity.y*Time.deltaTime;
 			transform.position+=Vector3.up*upVel*Time.deltaTime;
 		}

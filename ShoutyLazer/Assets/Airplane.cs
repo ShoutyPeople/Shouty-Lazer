@@ -4,6 +4,12 @@ using System.Collections;
 public class Airplane : MonoBehaviour {
 
 	public GameObject hurt;
+
+	public GameObject Explosion;
+
+	public GameObject drop;
+
+	public float dieIn;
 	public float accel;
 	public float friction;
 	public float minDistance;
@@ -39,15 +45,19 @@ public class Airplane : MonoBehaviour {
 			}
 			transform.rotation = Quaternion.LookRotation(vel.normalized);
 		} else {
-			if (!killed){
-				killed = true;
-				RemoveAfterSeconds ras = gameObject.AddComponent<RemoveAfterSeconds>();
-				ras.seconds = timeToRemove;
-			}
+			dieIn-=Time.deltaTime;
 			hurt.SetActive(true);
 			vel+=Physics.gravity*Time.deltaTime;
 			transform.position+=vel*Time.deltaTime;
 			transform.rotation = Quaternion.LookRotation(vel.normalized);
+
+			if (dieIn<=0){
+				drop.transform.parent = null;
+				drop.AddComponent<RemoveAfterSeconds>().seconds=5;
+				GameObject.Instantiate(Explosion,transform.position, transform.rotation);
+				GameObject.Destroy(this.gameObject);
+			}
+
 		}
 	}
 

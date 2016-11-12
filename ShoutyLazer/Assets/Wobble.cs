@@ -9,10 +9,12 @@ public class Wobble : MonoBehaviour {
 	
 	public float lerp;
 	Quaternion current;
+	Quaternion original;
 	float nextRoll;
 
 	// Use this for initialization
 	void Start () {
+		original = transform.rotation;
 		Roll();
 	}
 	
@@ -25,7 +27,7 @@ public class Wobble : MonoBehaviour {
 	}
 
 	void Roll(){
-		current = Quaternion.AngleAxis(Random.value*angle, Random.onUnitSphere);
+		current = original * Quaternion.AngleAxis(Random.value*angle, Random.onUnitSphere);
 		nextRoll = Time.time+Random.Range(minTime, maxTime);
 	}
 }
