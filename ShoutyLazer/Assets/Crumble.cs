@@ -45,7 +45,7 @@ public class Crumble : MonoBehaviour {
 
 	void Hit(RaycastHit rch){
 		if (ShoutInput.ShoutPower>=minPower){
-			hp-=Time.fixedDeltaTime;
+			hp-=Time.fixedDeltaTime*ShoutInput.ShoutPower;
 			if (hp<0){
 				wob.enabled=true;
 				crumbling=true;
